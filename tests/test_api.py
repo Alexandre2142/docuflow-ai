@@ -72,3 +72,51 @@ def test_extract_preserves_requirement_with_not_only_but_also():
         "The facility is not only required to report spills, "
         "but also to investigate them."
     )
+
+
+
+def test_extract_recognizes_encouraged_recommendation():
+    response = client.post("/extract", json={
+        "document_id": "demo-recommendation",
+        "text": "The supplier is encouraged to submit the report by 30 June."
+    })
+
+    assert response.status_code == 200
+    requirements = response.json()["requirements"]
+    assert len(requirements) == 1
+    assert requirements[0]["requirement_type"] == "recommendation"
+    assert requirements[0]["source_quote"] == (
+        "The supplier is encouraged to submit the report by 30 June."
+    )
+
+
+def test_extract_does_not_treat_might_as_obligation():
+    response = client.post("/extract", json={
+        "document_id": "demo-might",
+        "text": "The supplier might submit the report by 30 June."
+    })
+
+    assert response.status_code == 200
+    assert response.json()["requirements"] == []
+
+
+def test_extract_does_not_treat_permission_as_obligation():
+    response = client.post("/extract", json={
+        "document_id": "demo-permission",
+        "text": "The supplier may submit the report by 30 June."
+    })
+
+    assert response.status_code == 200
+    assert response.json()["requirements"] == []
+
+
+def test_extract_keeps_should_as_recommendation():
+    response = client.post("/extract", json={
+        "document_id": "demo-should",
+        "text": "The supplier should submit the report by 30 June."
+    })
+
+    assert response.status_code == 200
+    requirements = response.json()["requirements"]
+    assert len(requirements) == 1
+    assert requirements[0]["requirement_type"] == "recommendation"
