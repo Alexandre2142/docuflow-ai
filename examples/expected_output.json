@@ -1,0 +1,44 @@
+{
+  "document_id": "demo-001",
+  "requirements": [
+    {
+      "topic": "Waste management",
+      "action": "The facility shall maintain a record of each hazardous waste transfer.",
+      "responsible_entity": null,
+      "deadline": null,
+      "source_quote": "The facility shall maintain a record of each hazardous waste transfer.",
+      "verification_status": "verified",
+      "uncertainties": [
+        "Mock extraction uses rules, not an AI model.",
+        "Responsible entity and deadline are not inferred by this demo."
+      ]
+    },
+    {
+      "topic": "Emissions",
+      "action": "Operators must review emissions data every month.",
+      "responsible_entity": null,
+      "deadline": null,
+      "source_quote": "Operators must review emissions data every month.",
+      "verification_status": "verified",
+      "uncertainties": [
+        "Mock extraction uses rules, not an AI model.",
+        "Responsible entity and deadline are not inferred by this demo."
+      ]
+    },
+    {
+      "topic": "Training",
+      "action": "All employees should complete safety training.",
+      "responsible_entity": null,
+      "deadline": null,
+      "source_quote": "All employees should complete safety training.",
+      "verification_status": "verified",
+      "uncertainties": [
+        "Mock extraction uses rules, not an AI model.",
+        "Responsible entity and deadline are not inferred by this demo."
+      ]
+    }
+  ],
+  "review_required": true,
+  "provider": "mock",
+  "warnings": []
+}

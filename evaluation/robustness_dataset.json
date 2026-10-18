@@ -1,0 +1,96 @@
+[
+  {
+    "document_id": "R01_PERMISSION",
+    "text": "The operator may retain the inspection records for five years.",
+    "expected_requirements": []
+  },
+  {
+    "document_id": "R02_NOT_REQUIRED",
+    "text": "The operator is not required to retain duplicate records.",
+    "expected_requirements": []
+  },
+  {
+    "document_id": "R03_DOUBLE_NEGATIVE",
+    "text": "The operator shall not fail to submit the annual report.",
+    "expected_requirements": [
+      {
+        "source_quote": "The operator shall not fail to submit the annual report.",
+        "requirement_type": "obligation"
+      }
+    ]
+  },
+  {
+    "document_id": "R04_EXCEPTION",
+    "text": "The facility must maintain an incident register unless the competent authority grants an exemption.",
+    "expected_requirements": [
+      {
+        "source_quote": "The facility must maintain an incident register unless the competent authority grants an exemption.",
+        "requirement_type": "obligation"
+      }
+    ]
+  },
+  {
+    "document_id": "R05_RECOMMENDATION",
+    "text": "The site manager should review the emergency plan annually.",
+    "expected_requirements": [
+      {
+        "source_quote": "The site manager should review the emergency plan annually.",
+        "requirement_type": "recommendation"
+      }
+    ]
+  },
+  {
+    "document_id": "R06_DEADLINE",
+    "text": "The supplier must deliver the emissions report within 30 calendar days of the request.",
+    "expected_requirements": [
+      {
+        "source_quote": "The supplier must deliver the emissions report within 30 calendar days of the request.",
+        "requirement_type": "obligation"
+      }
+    ]
+  },
+  {
+    "document_id": "R07_TWO_ACTORS",
+    "text": "The supplier must provide the test report; the operator must archive it.",
+    "expected_requirements": [
+      {
+        "source_quote": "The supplier must provide the test report;",
+        "requirement_type": "obligation"
+      },
+      {
+        "source_quote": "the operator must archive it.",
+        "requirement_type": "obligation"
+      }
+    ]
+  },
+  {
+    "document_id": "R08_REPORTED",
+    "text": "The audit report states that the operator must retain calibration records.",
+    "expected_requirements": [
+      {
+        "source_quote": "The audit report states that the operator must retain calibration records.",
+        "requirement_type": "uncertain"
+      }
+    ]
+  },
+  {
+    "document_id": "R09_MIXED_MODALITIES",
+    "text": "The operator may retain the raw data, but it must not disclose personal information.",
+    "expected_requirements": [
+      {
+        "source_quote": "it must not disclose personal information.",
+        "requirement_type": "prohibition"
+      }
+    ]
+  },
+  {
+    "document_id": "R10_GUIDANCE",
+    "text": "The operator shall maintain a maintenance log. This document provides guidance only.",
+    "expected_requirements": [
+      {
+        "source_quote": "The operator shall maintain a maintenance log.",
+        "requirement_type": "obligation"
+      }
+    ]
+  }
+]

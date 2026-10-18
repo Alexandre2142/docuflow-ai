@@ -1,0 +1,37 @@
+﻿DocuFlow AI — Test and Evaluation Report
+Date: 2026-10-18
+
+Automated tests
+Command: python -m pytest -q
+Status: PASS
+Result: 33 passed, 1 warning
+Warning: Starlette deprecation warning concerning httpx and TestClient.
+
+Synthetic evaluation
+Command: python scripts/evaluate.py
+Documents: 25
+TP: 21
+FP: 0
+FN: 0
+Precision: 100.0%
+Recall: 100.0%
+F1: 100.0%
+Classification accuracy: 100.0% (21/21)
+Source quote match rate: 100.0% (21/21)
+
+Robustness evaluation
+Command: python scripts/evaluate_robustness.py
+Documents: 10
+TP: 9
+FP: 0
+FN: 0
+Precision: 100.0%
+Recall: 100.0%
+F1: 100.0%
+Classification accuracy: 100.0% (9/9)
+Source quote match rate: 100.0% (9/9)
+
+Limitations
+Both evaluation datasets are small and synthetic or manually annotated.
+These results do not establish generalization to real regulatory documents.
+The current extraction provider is a deterministic rule-based mock, not an LLM.

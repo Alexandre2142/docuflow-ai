@@ -1,0 +1,228 @@
+
+[
+  {
+    "document_id": "eval-001",
+    "text": "The facility shall maintain a record of each hazardous waste transfer. The site is located near the river.",
+    "expected_requirements": [
+      {
+        "source_quote": "The facility shall maintain a record of each hazardous waste transfer.",
+        "requirement_type": "obligation"
+      }
+    ]
+  },
+  {
+    "document_id": "eval-002",
+    "text": "Operators must review emissions data every month. The report includes a chart of annual production.",
+    "expected_requirements": [
+      {
+        "source_quote": "Operators must review emissions data every month.",
+        "requirement_type": "obligation"
+      }
+    ]
+  },
+  {
+    "document_id": "eval-003",
+    "text": "All employees should complete safety training. The cafeteria serves lunch at noon.",
+    "expected_requirements": [
+      {
+        "source_quote": "All employees should complete safety training.",
+        "requirement_type": "recommendation"
+      }
+    ]
+  },
+  {
+    "document_id": "eval-004",
+    "text": "The company is required to retain inspection records for five years. The building has three floors.",
+    "expected_requirements": [
+      {
+        "source_quote": "The company is required to retain inspection records for five years.",
+        "requirement_type": "obligation"
+      }
+    ]
+  },
+  {
+    "document_id": "eval-005",
+    "text": "The operator shall report any spill within 24 hours. The operator must notify the site manager.",
+    "expected_requirements": [
+      {
+        "source_quote": "The operator shall report any spill within 24 hours.",
+        "requirement_type": "obligation"
+      },
+      {
+        "source_quote": "The operator must notify the site manager.",
+        "requirement_type": "obligation"
+      }
+    ]
+  },
+  {
+    "document_id": "eval-006",
+    "text": "The facility should inspect storage tanks each quarter. Records should be stored securely.",
+    "expected_requirements": [
+      {
+        "source_quote": "The facility should inspect storage tanks each quarter.",
+        "requirement_type": "recommendation"
+      },
+      {
+        "source_quote": "Records should be stored securely.",
+        "requirement_type": "recommendation"
+      }
+    ]
+  },
+  {
+    "document_id": "eval-007",
+    "text": "No additional action is required. This paragraph describes the site's history.",
+    "expected_requirements": []
+  },
+  {
+    "document_id": "eval-008",
+    "text": "The document must be available in the office. A map shows the access road.",
+    "expected_requirements": [
+      {
+        "source_quote": "The document must be available in the office.",
+        "requirement_type": "obligation"
+      }
+    ]
+  },
+  {
+    "document_id": "eval-009",
+    "text": "The supplier shall provide a safety data sheet. Staff must check the delivery log.",
+    "expected_requirements": [
+      {
+        "source_quote": "The supplier shall provide a safety data sheet.",
+        "requirement_type": "obligation"
+      },
+      {
+        "source_quote": "Staff must check the delivery log.",
+        "requirement_type": "obligation"
+      }
+    ]
+  },
+  {
+    "document_id": "eval-010",
+    "text": "This facility has a wastewater treatment unit. The unit operates continuously during winter.",
+    "expected_requirements": []
+  },
+  {
+    "document_id": "eval-011",
+    "text": "The site must record energy consumption. The site should review the figures annually. The report is available online.",
+    "expected_requirements": [
+      {
+        "source_quote": "The site must record energy consumption.",
+        "requirement_type": "obligation"
+      },
+      {
+        "source_quote": "The site should review the figures annually.",
+        "requirement_type": "recommendation"
+      }
+    ]
+  },
+  {
+    "document_id": "eval-012",
+    "text": "The word 'mustard' appears in the cafeteria inventory. The cafeteria inventory lists fruit and vegetables.",
+    "expected_requirements": []
+  },
+  {
+    "document_id": "eval-013",
+    "text": "Each contractor is required to wear suitable protective equipment. Contractors enter through Gate B.",
+    "expected_requirements": [
+      {
+        "source_quote": "Each contractor is required to wear suitable protective equipment.",
+        "requirement_type": "obligation"
+      }
+    ]
+  },
+  {
+    "document_id": "eval-014",
+    "text": "The facility shall maintain a record of each hazardous waste transfer. The facility shall maintain a record of each hazardous waste transfer.",
+    "expected_requirements": [
+      {
+        "source_quote": "The facility shall maintain a record of each hazardous waste transfer.",
+        "requirement_type": "obligation"
+      },
+      {
+        "source_quote": "The facility shall maintain a record of each hazardous waste transfer.",
+        "requirement_type": "obligation"
+      }
+    ]
+  },
+  {
+    "document_id": "eval-015",
+    "text": "The report contains emissions data and a list of employees. It also describes the waste storage area.",
+    "expected_requirements": []
+  },
+  {
+    "document_id": "eval-016",
+    "text": "The facility is not required to submit a monthly report.",
+    "expected_requirements": []
+  },
+  {
+    "document_id": "eval-017",
+    "text": "The operator must not discharge untreated wastewater into the river.",
+    "expected_requirements": [
+      {
+        "source_quote": "The operator must not discharge untreated wastewater into the river.",
+        "requirement_type": "prohibition"
+      }
+    ]
+  },
+  {
+    "document_id": "eval-018",
+    "text": "The report does not state that the facility must submit a monthly report.",
+    "expected_requirements": []
+  },
+  {
+    "document_id": "eval-019",
+    "text": "If emissions exceed the permitted limit, the operator must notify the authority within 24 hours.",
+    "expected_requirements": [
+      {
+        "source_quote": "If emissions exceed the permitted limit, the operator must notify the authority within 24 hours.",
+        "requirement_type": "obligation"
+      }
+    ]
+  },
+  {
+    "document_id": "eval-020",
+    "text": "The guidance document states that operators must report spills within 24 hours.",
+    "expected_requirements": [
+      {
+        "source_quote": "The guidance document states that operators must report spills within 24 hours.",
+        "requirement_type": "uncertain"
+      }
+    ]
+  },
+  {
+    "document_id": "eval-021",
+    "text": "The facility is not required to submit a monthly report.",
+    "expected_requirements": []
+  },
+  {
+    "document_id": "eval-022",
+    "text": "The report does not state that the facility must submit a monthly report.",
+    "expected_requirements": []
+  },
+  {
+    "document_id": "eval-023",
+    "text": "The facility must not discharge untreated wastewater into the river.",
+    "expected_requirements": [
+      {
+        "source_quote": "The facility must not discharge untreated wastewater into the river.",
+        "requirement_type": "prohibition"
+      }
+    ]
+  },
+  {
+    "document_id": "eval-024",
+    "text": "The facility is not prohibited from discharging wastewater.",
+    "expected_requirements": []
+  },
+  {
+    "document_id": "eval-025",
+    "text": "The facility is not only required to report spills, but also to investigate them.",
+    "expected_requirements": [
+      {
+        "source_quote": "The facility is not only required to report spills, but also to investigate them.",
+        "requirement_type": "obligation"
+      }
+    ]
+  }
+]
