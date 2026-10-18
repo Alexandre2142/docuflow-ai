@@ -1,4 +1,3 @@
-
 """Deterministic mock extraction. This is NOT an AI model or legal analysis."""
 
 import re
@@ -6,56 +5,68 @@ from typing import Any
 
 
 _ACTION_PATTERN = re.compile(
-    r"\b(?:shall|must|should|may\s+not|"
-    r"is\s+(?:not\s+only\s+)?required\s+to|"
-    r"are\s+(?:not\s+only\s+)?required\s+to|"
-    r"is\s+prohibited\s+from|are\s+prohibited\s+from)\b",
+    r"\\b(?:shall|must|should|ought\\s+to|"
+    r"is\\s+(?:not\\s+only\\s+)?required\\s+to|"
+    r"are\\s+(?:not\\s+only\\s+)?required\\s+to|"
+    r"is\\s+(?:strongly\\s+)?encouraged\\s+to|"
+    r"are\\s+(?:strongly\\s+)?encouraged\\s+to|"
+    r"is\\s+recommended\\s+to|are\\s+recommended\\s+to|"
+    r"it\\s+is\\s+recommended\\s+that|"
+    r"we\\s+recommend\\s+that|"
+    r"may\\s+not|is\\s+prohibited\\s+from|"
+    r"are\\s+prohibited\\s+from)\\b",
     re.IGNORECASE,
 )
 
 _DENIAL_PATTERN = re.compile(
-    r"\b(?:does not|doesn't|do not|don't|did not|didn't)\s+"
-    r"(?:state|say|specify|indicate|require)\b",
+    r"\\b(?:does not|doesn't|do not|don't|did not|didn't)\\s+"
+    r"(?:state|say|specify|indicate|require)\\b",
     re.IGNORECASE,
 )
 
 _NOT_ONLY_PATTERN = re.compile(
-    r"\bnot only\b.*\bbut also\b",
+    r"\\bnot only\\b.*\\bbut also\\b",
     re.IGNORECASE,
 )
 
 _REPORTED_PATTERN = re.compile(
-    r"\b(?:states?|reports?|indicates?|says?)\s+that\b",
+    r"\\b(?:states?|reports?|indicates?|says?)\\s+that\\b",
     re.IGNORECASE,
 )
 
 _DOUBLE_NEGATIVE_PATTERN = re.compile(
-    r"\b(?:shall|must|should)\s+not\s+fail\s+to\b",
+    r"\\b(?:shall|must|should)\\s+not\\s+fail\\s+to\\b",
     re.IGNORECASE,
 )
 
 _PROHIBITION_PATTERN = re.compile(
-    r"\b(?:must not|shall not|may not|is prohibited from|"
-    r"are prohibited from)\b",
+    r"\\b(?:must not|shall not|may not|is prohibited from|"
+    r"are prohibited from)\\b",
     re.IGNORECASE,
 )
 
 _RECOMMENDATION_PATTERN = re.compile(
-    r"\bshould\b",
+    r"\\b(?:should|ought\\s+to|is\\s+(?:strongly\\s+)?encouraged\\s+to|"
+    r"are\\s+(?:strongly\\s+)?encouraged\\s+to|"
+    r"is\\s+recommended\\s+to|are\\s+recommended\\s+to|"
+    r"it\\s+is\\s+recommended\\s+that|we\\s+recommend\\s+that)\\b",
     re.IGNORECASE,
 )
 
 _DEPENDENT_CLAUSE_PATTERN = re.compile(
-    r"^(?:unless|except\s+when|provided\s+that|"
-    r"subject\s+to)\b",
+    r"^(?:unless|except\\s+when|provided\\s+that|"
+    r"subject\\s+to)\\b",
     re.IGNORECASE,
 )
 
 # Split at "but" only when it introduces a separate action clause.
 _BUT_ACTION_PATTERN = re.compile(
-    r",?\s+\bbut\b\s+(?=[^.!?;]*\b(?:shall|must|should|"
-    r"may\s+not|is\s+required\s+to|are\s+required\s+to|"
-    r"is\s+prohibited\s+from|are\s+prohibited\s+from)\b)",
+    r",?\\s+\\bbut\\b\\s+(?=[^.!?;]*\\b(?:shall|must|should|"
+    r"ought\\s+to|may\\s+not|is\\s+required\\s+to|are\\s+required\\s+to|"
+    r"is\\s+(?:strongly\\s+)?encouraged\\s+to|"
+    r"are\\s+(?:strongly\\s+)?encouraged\\s+to|"
+    r"is\\s+recommended\\s+to|are\\s+recommended\\s+to|"
+    r"is\\s+prohibited\\s+from|are\\s+prohibited\\s+from)\\b)",
     re.IGNORECASE,
 )
 
@@ -66,7 +77,7 @@ class MockLLMClient:
     def extract(self, text: str) -> list[dict[str, Any]]:
         candidates: list[dict[str, Any]] = []
 
-        parts = re.split(r"(?<=[.!?;])\s+|\n+", text.strip())
+        parts = re.split(r"(?<=[.!?;])\\s+|\\n+", text.strip())
         sentences: list[str] = []
 
         for part in parts:
@@ -75,10 +86,7 @@ class MockLLMClient:
                 continue
 
             # Preserve constructions such as "not only ... but also".
-            if (
-                sentences
-                and _DEPENDENT_CLAUSE_PATTERN.search(quote)
-            ):
+            if sentences and _DEPENDENT_CLAUSE_PATTERN.search(quote):
                 sentences[-1] = f"{sentences[-1]} {quote}"
             else:
                 sentences.append(quote)
